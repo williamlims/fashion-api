@@ -48,7 +48,9 @@ namespace EstoqueFashionAPI.Controllers
             }
             return new JsonResult(tabela);
         }
-
+        /// <summary>
+        /// Listar produto único
+        /// </summary>
         [HttpGet("{id}")]
         public JsonResult Get(int id)
         {
@@ -216,7 +218,7 @@ namespace EstoqueFashionAPI.Controllers
         /// </summary>
         /// <param name="id">Id do produto que será desativado ou ativado</param>
         /// <param name="status">Status 0 para inativar; Sataus 1 para ativar</param>        
-        [HttpPut("{id}/{status}")]
+        [HttpPut("{id}/status={status}")]
         public JsonResult Put(int id, int status )
         {
             string query = @"
@@ -262,7 +264,7 @@ namespace EstoqueFashionAPI.Controllers
         /// </summary>
         /// <param name="id">Id do produto que será atualizada a quatidade</param>
         /// <param name="valor">Quantidade para retirar ou adicionar ao estoque</param>       
-        [HttpPut("{id}/{valor}")]
+        [HttpPut("{id}/valor={valor}")]
         public JsonResult Put(int id, long valor)
         {
             string query = @"
