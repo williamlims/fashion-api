@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EstoqueFashionAPI</name>
+    </assembly>
+    <members>
+        <member name="M:EstoqueFashionAPI.Controllers.ProdutosController.Get">
+            <summary>
+            Listar todos os produtos
+            </summary>                
+        </member>
+        <member name="M:EstoqueFashionAPI.Controllers.ProdutosController.Post(EstoqueFashionAPI.Models.Produtos)">
+            <summary>
+            Cadastrar produto
+            </summary>        
+        </member>
+        <member name="M:EstoqueFashionAPI.Controllers.ProdutosController.Put(EstoqueFashionAPI.Models.Produtos,System.Int32)">
+            <summary>
+            Editar um produto cadastrado
+            </summary>
+            <param name="id">Id do produto que será editado</param>        
+        </member>
+        <member name="M:EstoqueFashionAPI.Controllers.ProdutosController.Put(System.Int32,System.Int32)">
+            <summary>
+            Inativar ou ativar um produto cadastrado
+            </summary>
+            <param name="id">Id do produto que será desativado ou ativado</param>
+            <param name="status">Status 0 para inativar; Sataus 1 para ativar</param>        
+        </member>
+        <member name="M:EstoqueFashionAPI.Controllers.ProdutosController.Put(System.Int32,System.Int64)">
+            <summary>
+            Retirar ou adicionar quantidade do produto no estoque
+            </summary>
+            <param name="id">Id do produto que será atualizada a quatidade</param>
+            <param name="valor">Quantidade para retirar ou adicionar ao estoque</param>       
+        </member>
+    </members>
+</doc>
